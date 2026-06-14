@@ -3,31 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Μάρθα Πλέσσα — Ψυχολόγος · Ψυχοθεραπεύτρια | Παλλήνη</title>
-<meta name="description" content="Μάρθα Πλέσσα, αδειούχος Ψυχολόγος – Ψυχοθεραπεύτρια στην Παλλήνη. Συνθετική ψυχοθεραπεία με ψυχαναλυτικό προσανατολισμό για ενήλικες, εφήβους & ζευγάρια. Δια ζώσης & online.">
+<title>Μάρθα Πλέσσα — Ψυχολόγος · Ψuχοθεραπεύτρια | Παλλήνη</title>
+<meta name="description" content="Μάρθα Πλέσσα, αδειούχος Ψυχολόγος – Ψuχοθεραπεύτρια στην Παλλήνη. Συνθετική ψuχοθεραπεία με ψuχαναλυτικό προσανατολισμό για ενήλικες, εφήβους & ζευγάρια. Δια ζώσης & online.">
 <meta name="author" content="Μάρθα Πλέσσα">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Μάρθα Πλέσσα — Ψυχολόγος · Ψυχοθεραπεύτρια">
-<meta property="og:description" content="Αναζητώντας το νόημα πίσω από το σύμπτωμα. Συνθετική ψυχοθεραπεία στην Παλλήνη.">
+<meta property="og:title" content="Μάρθα Πλέσσα — Ψυχολόγος · Ψuχοθεραπεύτρια">
+<meta property="og:description" content="Αναζητώντας το νόημα πίσω από το σύμπτωμα. Συνθετική ψuχοθεραπεία στην Παλλήνη.">
 <meta property="og:image" content="https://cdn.doctoranytime.gr/profileimages/4b5a5a52-c34c-4c18-b8f0-f17e3642f51e.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-/* ============ TOKENS - MINIMAL JAPANESE AESTHETIC ============ */
+/* ============ TOKENS ============ */
 :root{
-  /* New Color Palette: Replaced deep purples with soft naturals, wabi-sabi tones */
-  --bg-dark: #3a3a3a;       /* Sumi ink - for footer/loader only */
-  --bg-subtle: #2d2d2d;     /* Deep charcoal */
+  /* Updated Palette: Japanese Minimalism with re-introduced Wine colors */
+  --bg-dark: #2d2d2d;       /* Dark charcoal */
+  --bg-subtle: #faf8f5;     /* Warm off-white */
+  
+  /* Brand Wine Colors reintroduced for depth in dark sections */
+  --brand-wine: #3c2433;    /* Original Aubergine */
+  --brand-wine-deep: #2a1825; /* Darker Wine */
+
   --clay: #8a7f76;          /* Muted stone */
   --clay-soft: #b2a79e;     /* Light warm grey */
   --sand: #dcd3c9;          /* Tatami mat straw */
-  --sand-light: #e8e1da;    /* Bleached linen */
   --paper: #faf8f5;         /* Washi paper background */
-  --paper-warm: #f2ede6;    /* Warm shoji screen */
   --ink: #333333;           /* Sumi-e text black */
   --ink-soft: #5e5e5e;      /* Muted text */
-  --accent: #a58c6d;        /* Muted bamboo/gold - emphasis only */
+  --accent: #a58c6d;        /* Muted bamboo/gold emphasis */
   --line: rgba(51,51,51,.1);
   --line-soft: rgba(51,51,51,.06);
 
@@ -52,17 +55,7 @@ body{
   font-weight:400;
   overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
 }
-::selection{background:var(--sand);color:var(--ink)}
-::-webkit-scrollbar{width:10px}
-::-webkit-scrollbar-track{background:var(--paper)}
-::-webkit-scrollbar-thumb{background:var(--sand);border:3px solid var(--paper)}
-::-webkit-scrollbar-thumb:hover{background:var(--clay-soft)}
-img{display:block;max-width:100%}
-a{color:inherit;text-decoration:none}
-button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
-ul{list-style:none}
 
 /* ============ TYPE SCALE ============ */
 .eyebrow{
@@ -93,416 +86,199 @@ em,.it{font-style:italic}
 .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad-x);position:relative;z-index:2;}
 .section{padding-block:var(--section-y);position:relative;overflow:hidden;}
 section[id],header[id]{scroll-margin-top:84px}
-.rule{height:1px;background:var(--line);border:0;margin:0}
 
-/* Background Design - Minimal Flow */
-.bg-design{
-  position:absolute;inset:0;opacity:.06;z-index:0;pointer-events:none;
+/* Background Drawing Style - Minimal Flow (Japanese inspired) */
+.minimal-draw{
+  position:absolute;inset:0;opacity:.03;pointer-events:none;z-index:1;
+  background-image:repeating-linear-gradient(45deg, transparent, transparent 35px, var(--ink) 36px, transparent 37px);
+  animation:draw-flow 60s linear infinite;
 }
-.bg-design svg{width:100%;height:100%;fill:none;stroke:var(--ink);stroke-width:1;}
+@keyframes draw-flow{from{background-position:0 0;} to{background-position:1000px 1000px;}}
 
-/* Symmetrical Text Fixes - Avoid center alignment for body text */
-.text-cols-2{
-  display:grid;grid-template-columns:1fr;gap:2rem;text-align:left;
-}
-@media(min-width:760px){
-  .text-cols-2{grid-template-columns:1fr 1fr;}
-}
-
-/* ============ LOADER ============ */
-#loader{
-  position:fixed;inset:0;z-index:9999;
-  background:var(--bg-dark);
-  display:flex;align-items:center;justify-content:center;flex-direction:column;
-  gap:2rem;
-  transition:opacity 1s var(--ease-expo),visibility 1s var(--ease-expo);
-}
-#loader.done{opacity:0;visibility:hidden}
-#loader .lpath{fill:none;stroke:var(--sand-light);stroke-width:4;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.1s var(--ease-expo) forwards;}
-#loader .lname{font-family:var(--serif-display);font-size:clamp(1.1rem,3vw,1.5rem);letter-spacing:.42em;text-transform:uppercase;color:var(--sand-light);padding-left:.42em;opacity:0;animation:fadeUp 1s var(--ease-expo) .9s forwards;}
-@keyframes draw{to{stroke-dashoffset:0}}
-@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.minimal-draw.dark{opacity:0.02;background-image:repeating-linear-gradient(45deg, transparent, transparent 35px, #fff 36px, transparent 37px);}
 
 /* ============ NAV ============ */
 .nav{
   position:fixed;top:0;left:0;width:100%;z-index:1000;
   display:flex;align-items:center;justify-content:space-between;
   padding:clamp(1rem,2.4vw,1.6rem) var(--pad-x);
-  transition:background .5s var(--ease-soft),box-shadow .5s var(--ease-soft),padding .5s var(--ease-soft);
+  transition:background .5s var(--ease-soft),box-shadow .5s var(--ease-soft);
 }
 .nav.solid{
   background:rgba(250,248,245,.92);
   backdrop-filter:blur(14px) saturate(1.1);
-  -webkit-backdrop-filter:blur(14px) saturate(1.1);
   box-shadow:0 1px 0 var(--line-soft);
-  padding-block:clamp(.7rem,1.6vw,1rem);
 }
-.nav-brand{display:flex;align-items:center;gap:.7rem;color:var(--ink);transition:color .5s}
-.nav-mark{width:34px;height:34px;}
+.nav-brand{display:flex;align-items:center;gap:.7rem;color:var(--ink);}
 .nav-mark .m{fill:none;stroke:currentColor;stroke-width:5;stroke-linecap:round;}
-.nav-name{font-family:var(--serif-display);font-size:1.18rem;font-weight:600;letter-spacing:.02em;line-height:1}
-.nav-name small{display:block;font-family:var(--sans);font-size:.56rem;font-weight:500;letter-spacing:.26em;text-transform:uppercase;opacity:.7;margin-top:.25em}
 .nav-links{display:flex;align-items:center;gap:clamp(1.4rem,2.6vw,2.6rem)}
 .nav-links a{font-family:var(--sans);font-size:.82rem;font-weight:500;letter-spacing:.04em;color:var(--ink-soft);position:relative;transition:color .5s,opacity .3s;}
 .nav-links a:hover{color:var(--ink);}
 .nav-links a:not(.nav-cta)::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1px;background:currentColor;transition:width .4s var(--ease-expo);}
 .nav-links a:not(.nav-cta):hover::after{width:100%}
-.nav-cta{border:1px solid currentColor;padding:.6em 1.3em;border-radius:100px;transition:background .4s,color .4s,border-color .4s !important;}
-.nav-cta:hover{background:var(--bg-subtle);color:var(--paper)!important;border-color:var(--bg-subtle);}
-.burger{display:none;width:30px;height:18px;position:relative;color:var(--ink);}
-.burger span{position:absolute;left:0;width:100%;height:1.5px;background:currentColor;transition:transform .4s var(--ease-expo),opacity .3s}
-.burger span:nth-child(1){top:0}
-.burger span:nth-child(2){top:50%;transform:translateY(-50%)}
-.burger span:nth-child(3){bottom:0}
-body.menu-open .burger span:nth-child(1){top:50%;transform:translateY(-50%) rotate(45deg)}
-body.menu-open .burger span:nth-child(2){opacity:0}
-body.menu-open .burger span:nth-child(3){bottom:auto;top:50%;transform:translateY(-50%) rotate(-45deg)}
-.menu{position:fixed;inset:0;z-index:999;background:var(--bg-subtle);display:flex;flex-direction:column;justify-content:center;padding:var(--pad-x);gap:.2rem;clip-path:circle(0% at 100% 0);transition:clip-path .8s var(--ease-expo);pointer-events:none;}
-body.menu-open .menu{clip-path:circle(150% at 100% 0);pointer-events:auto}
-.menu a{font-family:var(--serif-display);font-size:clamp(2rem,9vw,3.2rem);color:var(--sand-light);font-weight:500;line-height:1.5;opacity:0;transform:translateY(20px);transition:opacity .5s var(--ease-expo),transform .5s var(--ease-expo),color .3s;}
-body.menu-open .menu a{opacity:1;transform:none}
-body.menu-open .menu a:nth-child(1){transition-delay:.25s}
-body.menu-open .menu a:nth-child(2){transition-delay:.32s}
-body.menu-open .menu a:nth-child(3){transition-delay:.39s}
-body.menu-open .menu a:nth-child(4){transition-delay:.46s}
-body.menu-open .menu a:nth-child(5){transition-delay:.53s}
-body.menu-open .menu a:nth-child(6){transition-delay:.6s}
-.menu a:hover{color:var(--paper)}
-.menu-foot{margin-top:2.5rem;font-family:var(--sans);font-size:.8rem;letter-spacing:.12em;color:var(--clay-soft);opacity:0;transition:opacity .5s .7s}
-body.menu-open .menu-foot{opacity:1}
+.nav-cta{border:1px solid currentColor;padding:.6em 1.3em;border-radius:100px;color:var(--ink)!important;}
+.nav-cta:hover{background:var(--brand-wine);color:#fff!important;border-color:var(--brand-wine);}
 
 /* ============ HERO ============ */
-.hero{
-  position:relative;min-height:100svh;display:flex;align-items:center;background:var(--paper);overflow:hidden;
-}
-.hero-laby{position:absolute;top:50%;right:-6vw;transform:translateY(-50%);width:min(58vw,720px);height:auto;z-index:0;opacity:.1;pointer-events:none;}
-.hero-laby .h{fill:none;stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;}
-.hero.in .hero-laby .h{animation:draw 3s var(--ease-expo) .3s forwards}
-.hero-inner{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:8rem var(--pad-x) 6rem;width:100%; text-align:left;}
-.hero-eyebrow{overflow:hidden}
-.hero-eyebrow span{display:inline-block;transform:translateY(110%);transition:transform .9s var(--ease-expo) .3s}
-.hero.in .hero-eyebrow span{transform:none}
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;background:var(--paper);overflow:hidden;}
+.hero-inner{z-index:2;max-width:var(--maxw);margin:0 auto;padding:8rem var(--pad-x) 6rem;width:100%; text-align:left;}
 .hero h1{font-family:var(--serif-display);font-size:clamp(2.5rem,6.6vw,5.6rem);font-weight:500;line-height:1.02;letter-spacing:-.015em;color:var(--ink);max-width:17ch;margin:1.6rem 0;}
-.hero h1 .ln{display:block;overflow:hidden}
-.hero h1 .ln b{display:inline-block;font-weight:inherit;transform:translateY(105%);transition:transform 1s var(--ease-expo)}
-.hero.in h1 .ln:nth-child(1) b{transition-delay:.42s}
-.hero.in h1 .ln:nth-child(2) b{transition-delay:.54s}
-.hero.in h1 .ln:nth-child(3) b{transition-delay:.66s}
-.hero.in h1 .ln b{transform:none}
 .hero h1 i{font-style:italic;color:var(--accent)}
-.hero-sub{max-width:46ch;font-size:clamp(1.05rem,1.7vw,1.3rem);color:var(--ink-soft);line-height:1.65;opacity:0;transform:translateY(18px);transition:opacity 1s var(--ease-expo) .85s,transform 1s var(--ease-expo) .85s;}
-.hero.in .hero-sub{opacity:1;transform:none}
-.hero-actions{display:flex;flex-wrap:wrap;gap:1rem 1.5rem;align-items:center;margin-top:2.4rem;opacity:0;transform:translateY(18px);transition:opacity 1s var(--ease-expo) 1s,transform 1s var(--ease-expo) 1s}
-.hero.in .hero-actions{opacity:1;transform:none}
+.hero-sub{max-width:46ch;font-size:clamp(1.05rem,1.7vw,1.3rem);color:var(--ink-soft);line-height:1.65;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:1rem 1.5rem;align-items:center;margin-top:2.4rem;}
 .btn{font-family:var(--sans);font-size:.86rem;font-weight:600;letter-spacing:.03em;padding:1.05em 2.2em;border-radius:100px;display:inline-flex;align-items:center;gap:.6em;transition:transform .5s var(--ease-expo),box-shadow .5s var(--ease-expo),background .4s;}
-.btn-primary{background:var(--bg-subtle);color:var(--paper);}
+.btn-primary{background:var(--brand-wine);color:#fff;}
 .btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 24px -10px rgba(0,0,0,.3)}
-.btn-ghost{color:var(--ink);position:relative}
-.btn-ghost::after{content:"";position:absolute;left:2.2em;right:2.2em;bottom:.8em;height:1px;background:var(--ink);transform:scaleX(.4);transform-origin:left;opacity:.5;transition:transform .5s var(--ease-expo),opacity .4s}
-.btn-ghost:hover::after{transform:scaleX(1);opacity:1}
-.scroll-cue{position:absolute;left:50%;bottom:2.2rem;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.7rem;z-index:2;font-family:var(--sans);font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;color:var(--clay);opacity:0;transition:opacity 1s 1.4s;}
-.hero.in .scroll-cue{opacity:1}
-.scroll-cue .ln{width:1px;height:48px;background:var(--clay);position:relative;overflow:hidden}
-.scroll-cue .ln::after{content:"";position:absolute;top:-100%;left:0;width:100%;height:100%;background:var(--accent);animation:cue 2.2s var(--ease-soft) infinite}
-@keyframes cue{0%{top:-100%}55%{top:100%}100%{top:100%}}
+.btn-ghost{color:var(--ink);}
 
-/* ============ MARQUEE ============ */
-.marquee{background:var(--paper-warm);color:var(--ink-soft);padding-block:1.15rem;overflow:hidden;position:relative;border-block:1px solid var(--line);}
-.marquee-track{display:flex;width:max-content;animation:slide 38s linear infinite}
-.marquee:hover .marquee-track{animation-play-state:paused}
-.marquee-track span{font-family:var(--serif-display);font-size:clamp(1.1rem,2vw,1.5rem);font-style:italic;padding-inline:1.6rem;white-space:nowrap;display:inline-flex;align-items:center;gap:1.6rem;}
-.marquee-track span::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);display:inline-block}
-@keyframes slide{to{transform:translateX(-50%)}}
-
-/* ============ ABOUT ============ */
-.about{background:var(--paper);}
-.about-grid{display:grid;grid-template-columns:1fr;gap:clamp(2.5rem,6vw,6rem);align-items:center}
-@media(min-width:980px){.about-grid{grid-template-columns:1fr 1fr;}}
-.about-figure{position:relative}
-.about-figure .imgwrap{position:relative;overflow:hidden;background:var(--sand-light)}
-.about-figure img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:saturate(.85) contrast(1.02);transition:transform 1.2s var(--ease-expo)}
-.about-figure:hover img{transform:scale(1.03)}
-.about-figure .frame{position:absolute;inset:14px;border:1px solid rgba(255,255,255,.3);pointer-events:none;z-index:2}
-.about-figure .tag{position:absolute;left:-1px;bottom:24px;background:var(--bg-subtle);color:var(--paper);font-family:var(--sans);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;padding:.7em 1.3em;z-index:3;}
-.about-body .display{font-size:clamp(1.9rem,4vw,3.1rem);color:var(--ink);margin:1.4rem 0;max-width:15ch;text-align:left;}
-.about-quote{font-family:var(--serif-display);font-style:italic;font-size:clamp(1.3rem,2.4vw,1.75rem);line-height:1.45;color:var(--ink);border-left:1px solid var(--clay);padding-left:1.6rem;margin:2rem 0;text-align:left;}
-.creds{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem; justify-content:flex-start;}
-.creds li{font-family:var(--sans);font-size:.74rem;letter-spacing:.06em;color:var(--ink-soft);border:1px solid var(--line);padding:.55em 1em;border-radius:100px;}
-
-/* ============ PHILOSOPHY & GRID SYSTEM ============ */
-.approach{background:var(--paper-warm);}
-.approach-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr;gap:1.5rem;}
+/* ============ PHILOSOPHY & GRIDS ============ */
+.approach{background:var(--brand-wine);color:#fff;}
+.approach .eyebrow{color:var(--clay-soft);}
+.approach-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;}
 @media(min-width:760px){.approach-grid{grid-template-columns:repeat(3,1fr);}}
-.appr-card{background:var(--paper);padding:clamp(2rem,3vw,2.8rem);border:1px solid var(--line);transition:border-color .4s, transform .4s;}
-.appr-card:hover{border-color:var(--accent);transform:translateY(-5px);}
-.appr-num{font-family:var(--sans);font-size:.72rem;letter-spacing:.3em;color:var(--clay);font-weight:500;}
-.appr-card h3{font-family:var(--serif-display);font-size:clamp(1.4rem,2.4vw,1.85rem);font-weight:500;margin:1.4rem 0 1rem;line-height:1.2;color:var(--ink);}
-.appr-card p{font-size:.98rem;color:var(--ink-soft);line-height:1.7}
-.appr-laby{position:absolute;top:2rem;right:2rem;width:24px;height:24px;opacity:.15}
-.appr-laby .m{fill:none;stroke:var(--ink);stroke-width:5;}
+.appr-card{background:rgba(255,255,255,0.05);padding:clamp(2rem,3vw,2.8rem);border:1px solid rgba(255,255,255,0.08);color:var(--sand);border-radius:2px;}
+.appr-num{font-family:var(--sans);font-size:.72rem;letter-spacing:.3em;color:var(--clay-soft);font-weight:500;}
+.appr-card h3{font-family:var(--serif-display);font-size:clamp(1.4rem,2.4vw,1.85rem);font-weight:500;margin:1.4rem 0 1rem;line-height:1.2;color:#fff;}
 
-/* Headings shared style */
+/* Headings symmetrical styling */
 .sec-head-symm{text-align:center;max-width:var(--maxw);margin:0 auto clamp(3.5rem,7vw,6rem); display:flex; flex-direction:column; align-items:center;}
-.sec-head-symm h2{font-family:var(--serif-display);font-size:clamp(2.1rem,4.6vw,3.6rem);font-weight:500;color:var(--ink);line-height:1.05;margin-top:1.4rem; text-align:center;}
+.sec-head-symm h2{font-family:var(--serif-display);font-size:clamp(2.1rem,4.6vw,3.6rem);font-weight:500;color:var(--ink);line-height:1.05;margin-top:1.4rem;}
 .sec-head-symm h2 i{font-style:italic;color:var(--accent)}
 .sec-head-symm .head-text{max-width:var(--measure); margin-top:1.6rem; color:var(--ink-soft);}
+.approach .sec-head-symm h2{color:#fff;}
+.approach .head-text{color:var(--sand);}
 
-/* ============ SERVICES ============ */
-.services{background:var(--paper);}
+/* ============ SERVICES (Enhanced Text) ============ */
 .svc-list{max-width:var(--maxw);margin:0 auto;}
 .svc{border-top:1px solid var(--line)}
 .svc:last-child{border-bottom:1px solid var(--line)}
-.svc-trigger{width:100%;display:grid;grid-template-columns:auto 1fr auto;gap:clamp(1rem,3vw,2.4rem);align-items:center;text-align:left;padding:clamp(1.6rem,3vw,2.4rem) 0;transition:padding-left .5s var(--ease-expo);}
-.svc-trigger:hover{padding-left:.6rem}
-.svc-idx{font-family:var(--sans);font-size:.8rem;color:var(--clay);font-weight:500;}
+.svc-trigger{width:100%;display:grid;grid-template-columns:auto 1fr auto;gap:clamp(1rem,3vw,2.4rem);align-items:center;text-align:left;padding:clamp(1.6rem,3vw,2.4rem) 0;}
 .svc-title{font-family:var(--serif-display);font-size:clamp(1.4rem,3vw,2.1rem);font-weight:500;color:var(--ink);line-height:1.18}
 .svc-toggle{position:relative;width:20px;height:20px;}
-.svc-toggle::before,.svc-toggle::after{content:"";position:absolute;background:var(--ink);transition:transform .5s var(--ease-expo),opacity .4s;top:50%;left:0}
+.svc-toggle::before,.svc-toggle::after{content:"";position:absolute;background:var(--ink);transition:transform .5s var(--ease-expo);top:50%;left:0}
 .svc-toggle::before{width:100%;height:1.5px;transform:translateY(-50%)}
 .svc-toggle::after{width:1.5px;height:100%;left:50%;top:0;transform:translateX(-50%)}
-.svc.open .svc-toggle::after{transform:translateX(-50%) scaleY(0);opacity:0}
+.svc.open .svc-toggle::after{transform:translateX(-50%) scaleY(0);}
 .svc-panel{max-height:0;overflow:hidden;transition:max-height .7s var(--ease-expo)}
 .svc-panel-inner{padding:0 0 clamp(1.8rem,3vw,2.6rem) clamp(2.4rem,7vw,7rem);max-width:100ch;}
-.svc-panel-inner p{color:var(--ink-soft);font-size:1.06rem;margin-bottom:1.3rem; text-align:left;}
-.svc-includes{display:flex;flex-wrap:wrap;gap:.5rem;}
-.svc-includes li{font-family:var(--sans);font-size:.74rem;color:var(--clay);background:var(--sand-light);padding:.55em 1em;border-radius:4px;}
+.svc-panel-inner p{color:var(--ink-soft);font-size:1.06rem;margin-bottom:1.3rem;}
 
-/* ============ PROCESS (Minimal Flow) ============ */
-.process{background:var(--paper-warm); position:relative;}
-.process-grid{display:grid;grid-template-columns:1fr;gap:4rem;align-items:start;}
-@media(min-width:980px){.process-grid{grid-template-columns:1.2fr 0.8fr;gap:clamp(3rem,6vw,6rem);}}
-.path{position:relative;text-align:left;}
-.path-line{position:absolute;left:18px;top:0;bottom:0;width:1px;z-index:0}
-.path-line svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.path-line .pl{fill:none;stroke:var(--sand);stroke-width:2;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.4s var(--ease-expo);}
-.step{position:relative;display:grid;grid-template-columns:clamp(40px,9vw,50px) 1fr;gap:1.5rem;padding-block:1rem;}
-.step-dot{position:relative;z-index:2}
-.step-dot .ring{width:36px;height:36px;border-radius:50%;background:var(--paper);border:2px solid var(--sand);display:flex;align-items:center;justify-content:center;font-family:var(--serif-display);font-style:italic;font-size:1.1rem;color:var(--ink);transition:border-color .5s,color .5s,transform .5s var(--ease-expo);}
-.step.reveal.in .step-dot .ring{border-color:var(--accent);color:var(--accent);}
-.step-body h3{font-family:var(--serif-display);font-size:clamp(1.3rem,2.6vw,1.85rem);font-weight:500;color:var(--ink);margin-bottom:.5rem;line-height:1.2; text-align:left;}
-.step-body p{color:var(--ink-soft);font-size:1.04rem;max-width:54ch; text-align:left;}
-.step-body em{color:var(--accent);font-style:italic}
+/* ============ PROCESS (Relocated Image Bigger) ============ */
+.process{background:var(--paper); position:relative;}
+.process-grid{display:grid;grid-template-columns:1fr;gap:4rem;align-items:center;}
+@media(min-width:980px){.process-grid{grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,6rem);}}
 
-.process-image{position:sticky;top:100px; max-width:400px; margin:0 auto;}
+.process-image{width:100%; max-width:800px; margin:0 auto;} /* Image Bigger */
 .process-image .imgwrap{position:relative;padding:12px;background:var(--paper);border:1px solid var(--line);box-shadow:0 15px 40px -20px rgba(0,0,0,.1);}
-.process-image .tag{display:block;font-family:var(--sans);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--clay);margin-top:1.5rem;text-align:center;}
+.process-image img{width:100%; height:auto; object-fit:cover;}
 
-/* ============ REVIEWS ============ */
-.reviews{background:var(--bg-subtle);color:var(--paper-warm);}
-.reviews .eyebrow{color:var(--clay-soft);}
-.reviews .sec-head-symm h2{color:var(--paper);}
+/* ============ ΑΞΙΟΛΟΓΗΣΕΙΣ (Reintroduced previous color depth) ============ */
+.reviews{background:var(--brand-wine-deep);color:#fff;}
+.reviews .sec-head-symm h2{color:#fff;}
 .reviews .head-text{color:var(--sand);}
-.review-score{text-align:center;margin-bottom:3rem;}
-.review-score .num{font-family:var(--serif-display);font-size:clamp(3rem,7vw,5rem);line-height:1;color:var(--paper)}
-.review-score .stars{color:var(--accent);font-size:1.1rem;letter-spacing:.2em;margin-top:.3rem}
-.review-score small{display:block;font-family:var(--sans);font-size:.72rem;letter-spacing:.14em;color:var(--sand-light);margin-top:.5rem;text-transform:uppercase}
-.review-inner{border:1px solid rgba(255,255,255,.1);padding:2rem;height:100%;display:flex;flex-direction:column;gap:1.2rem;background:rgba(255,255,255,.02);}
-.review-mark{font-family:var(--serif-display);font-size:3.4rem;line-height:.5;color:var(--accent);height:1.2rem;text-align:left;}
-.review-text{font-family:var(--serif-body);font-size:1.02rem;line-height:1.7;color:var(--sand-light);flex:1; text-align:left;}
-.review-meta{display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,.08);padding-top:1.1rem;}
-.review-name{font-family:var(--serif-display);font-size:1.2rem;font-style:italic}
-.review-date{font-family:var(--sans);font-size:.7rem;letter-spacing:.08em;color:var(--sand);}
-.dots{display:flex;gap:.6rem; justify-content:center;}
-.dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2);transition:background .4s,width .4s;}
-.dot.active{background:var(--accent);width:26px;border-radius:100px}
-.arrow{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;transition:background .4s,border-color .4s;}
-.arrow:hover{background:var(--paper);border-color:var(--paper);}
-.arrow svg{width:18px;height:18px;stroke:var(--paper);stroke-width:1.5;fill:none;transition:stroke .4s;}
-.arrow:hover svg{stroke:var(--bg-subtle)}
+.review-inner{background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); padding:2rem; margin-bottom:1rem; border-radius:2px;}
+.review-meta-symm{display:flex; align-items:center; justify-content:space-between; border-top:1px solid rgba(255,255,255,0.1); padding-top:1rem; margin-top:1rem;}
+.review-more-link-symm{text-align:center; margin-top:3rem;}
 
-/* ============ GALLERY ============ */
-.gallery{background:var(--paper);}
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:clamp(150px,20vw,230px);gap:clamp(.6rem,1.4vw,1rem);}
-@media(min-width:760px){.gallery-grid{grid-template-columns:repeat(3,1fr);}}
-.gtile img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease-expo);filter:saturate(.8)}
-.gtile:hover img{transform:scale(1.06)}
-.gtile.tall{grid-row:span 2}
-.gtile.wide{grid-column:span 2}
-
-/* ============ FAQ ============ */
-.faq{background:var(--paper-warm);}
-.faq-grid{display:grid;grid-template-columns:1fr;gap:4rem;}
-@media(min-width:980px){.faq-grid{grid-template-columns:1fr; max-width:800px; margin:0 auto;}}
+/* ============ FAQ (More dropdowns) ============ */
+.faq-grid{max-width:800px; margin:0 auto;}
 .faq-item{border-bottom:1px solid var(--line)}
 .faq-item:first-child{border-top:1px solid var(--line)}
 .faq-q{width:100%;display:flex;justify-content:space-between;gap:1.5rem;align-items:center;text-align:left;padding:1.5rem 0;}
 .faq-q span{font-family:var(--serif-display);font-size:clamp(1.15rem,2vw,1.4rem);font-weight:500;color:var(--ink);line-height:1.3;}
-.faq-icon{position:relative;width:20px;height:20px;}
-.faq-icon::before,.faq-icon::after{content:"";position:absolute;background:var(--ink);top:50%;left:0;transition:transform .5s var(--ease-expo);}
-.faq-icon::before{width:100%;height:1.5px;transform:translateY(-50%)}
-.faq-icon::after{width:1.5px;height:100%;left:50%;transform:translateX(-50%)}
-.faq-item.open .faq-icon::after{transform:translateX(-50%) scaleY(0)}
-.faq-a p{padding-bottom:1.6rem;color:var(--ink-soft);max-width:80ch; text-align:left;}
+.faq-a p{padding-bottom:1.6rem;color:var(--ink-soft);max-width:80ch;}
 
-/* ============ CONTACT ============ */
+/* ============ CONTACT & FOOTER ============ */
 .contact{background:var(--paper);}
 .contact-grid{display:grid;grid-template-columns:1fr;gap:clamp(2.5rem,5vw,5rem);}
 @media(min-width:980px){.contact-grid{grid-template-columns:1fr 1fr;}}
-.contact-l h2{font-family:var(--serif-display);font-size:clamp(2.2rem,5vw,4rem);font-weight:500;line-height:1.04;margin:1.4rem 0; color:var(--ink); text-align:left;}
-.contact-l h2 i{font-style:italic;color:var(--accent)}
-.contact-l>p{color:var(--ink-soft);max-width:40ch;margin-bottom:2.4rem; text-align:left;}
-.cd svg{width:22px;height:22px;flex:none;stroke:var(--accent);fill:none;stroke-width:1.4;}
-.cd .lbl{font-family:var(--sans);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--clay);display:block;}
-.cd .val{font-size:1.08rem;color:var(--ink);display:block;transition:color .3s; text-align:left;}
-a.cd:hover .val{color:var(--accent)}
-.contact-social a{width:46px;height:46px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .4s,border-color .4s;}
-.contact-social a:hover{background:var(--bg-subtle);border-color:var(--bg-subtle);}
-.contact-social svg{width:20px;height:20px;fill:var(--ink);transition:fill .3s;}
-.contact-social a:hover svg{fill:var(--paper);}
-.map-wrap iframe{width:100%;height:100%;min-height:340px;border:0;filter:grayscale(1) sepia(.1) contrast(.9);display:block;}
-
-/* ============ FOOTER ============ */
-.footer{background:var(--bg-dark);color:var(--sand-light);padding-block:clamp(2.5rem,5vw,3.5rem);border-top:1px solid rgba(255,255,255,.05);}
+.footer{background:var(--brand-wine-deep);color:var(--sand-light);padding-block:clamp(2.5rem,5vw,3.5rem);border-top:1px solid rgba(255,255,255,0.05);}
 .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;}
-.footer-brand .m{fill:none;stroke:var(--sand-light);stroke-width:5;}
-.footer-brand b{font-family:var(--serif-display);font-size:1.15rem;font-weight:600;color:var(--paper)}
-.footer-copy{font-family:var(--sans);font-size:.78rem;letter-spacing:.04em;color:var(--sand);text-align:center;}
-.footer-credit a{color:var(--paper);border-bottom:1px solid rgba(255,255,255,.2);transition:color .3s;}
-.footer-credit a:hover{color:var(--accent)}
 
 /* ============ LIGHTBOX & REVEAL ============ */
-.lightbox{position:fixed;inset:0;z-index:9998;background:rgba(0,0,0,.9);display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;visibility:hidden;transition:opacity .5s var(--ease-expo),visibility .5s;}
-.lightbox.show{opacity:1;visibility:visible}
-.lightbox img{max-width:92vw;max-height:88vh;object-fit:contain;}
+.lightbox{position:fixed;inset:0;z-index:9998;background:rgba(0,0,0,.9);display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;visibility:hidden;}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease-expo),transform 1s var(--ease-expo);}
 .reveal.in{opacity:1;transform:none}
 </style>
 </head>
 <body>
 
-<div id="loader" aria-hidden="true">
-  <svg viewBox="0 0 100 100" aria-hidden="true" width="100" height="100">
-    <path class="lpath" d="M50 8 A42 42 0 1 0 92 50" pathLength="1"/>
-    <path class="lpath" d="M50 20 A30 30 0 1 1 20 50" pathLength="1"/>
-    <path class="lpath" d="M50 32 A18 18 0 1 0 68 50" pathLength="1"/>
-  </svg>
-  <div class="lname">Μάρθα Πλέσσα</div>
+<!-- ============ LOADER ============ -->
+<div id="loader" aria-hidden="true" style="position:fixed;inset:0;z-index:9999;background:#faf8f5;display:flex;align-items:center;justify-content:center;">
+  <div style="font-family:serif;font-size:1.5rem;font-style:italic;color:#333;">Μάρθα Πλέσσα</div>
 </div>
 
+<!-- ============ NAV ============ -->
 <nav class="nav" id="nav">
   <a href="#top" class="nav-brand" aria-label="Μάρθα Πλέσσα — αρχική">
-    <svg class="nav-mark" viewBox="0 0 100 100" aria-hidden="true">
-      <path class="m" d="M50 12 A38 38 0 1 0 88 50"/>
-      <path class="m" d="M50 26 A24 24 0 1 1 26 50"/>
-      <path class="m" d="M50 50 L50 88"/>
+    <svg class="nav-mark" viewBox="0 0 100 100" aria-hidden="true" width="30" height="30">
+      <path class="m" d="M50 12 A38 38 0 1 0 88 50"/><path class="m" d="M50 26 A24 24 0 1 1 26 50"/><path class="m" d="M50 50 L50 88"/>
     </svg>
-    <span class="nav-name">Μάρθα Πλέσσα<small>Ψuχοθεραπεύτρια</small></span>
+    <span class="nav-name" style="font-family:serif;font-weight:600;font-size:1.2rem;">Μάρθα Πλέσσα</span>
   </a>
   <div class="nav-links">
     <a href="#about">Προφίλ</a>
-    <a href="#approach">Προσέγγιση</a>
     <a href="#services">Υπηρεσίες</a>
-    <a href="#reviews">Μαρτυρίες</a>
-    <a href="#contact" class="nav-cta">Κλείστε ραντεβού</a>
+    <a href="#reviews">Αξιολογήσεις</a>
+    <a href="#contact" class="nav-cta">Ραντεβού</a>
   </div>
-  <button class="burger" id="burger" aria-label="Άνοιγμα μενού" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
 </nav>
 
 <main id="top">
 
+<!-- ============ HERO ============ -->
 <header class="hero section" id="hero">
-  <div class="bg-design" aria-hidden="true">
-    <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
-      <path d="M0,1000 C300,900 600,1000 1000,800 L1000,0 L0,0 Z"></path>
-    </svg>
-  </div>
-  <svg class="hero-laby" viewBox="0 0 100 100" aria-hidden="true">
-    <path class="h" d="M50 4 A46 46 0 1 0 96 50" pathLength="1"/>
-    <path class="h" d="M50 16 A34 34 0 1 1 16 50" pathLength="1"/>
-    <path class="h" d="M50 50 L50 96" pathLength="1"/>
-  </svg>
+  <div class="minimal-draw"></div>
   <div class="hero-inner">
-    <p class="eyebrow hero-eyebrow"><span>Ψuχολόγος · Ψuχοθεραπεύτρια — Παλλήνη</span></p>
+    <p class="eyebrow">Ψuχολόγος · Ψuχοθεραπεύτρια — Παλλήνη</p>
     <h1>
       <span class="ln"><b>Το νόημα</b></span>
       <span class="ln"><b>πίσω από το <i>σύμπτωμα.</i></b></span>
     </h1>
-    <p class="hero-sub">Ψuχοθεραπεία με βάθος και συνθετική προσέγγιση — ένας ασφαλής, εχέμυθος χώρος για να ακούσουμε όσα δεν έχουν ακόμη βρει λόγια.</p>
+    <p class="hero-sub">Ψuχοθεραπεία με ψuχαναλυτικό προσανατολισμό. Ένας ασφαλής, εχέμuθος χώρος στην Παλλήνη για να ακούσουμε όσα δεν έχουν ακόμη βρει λόγια.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary">Κλείστε ραντεβού
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-      <a href="#approach" class="btn btn-ghost">Η προσέγγισή μου</a>
+      <a href="#contact" class="btn btn-primary">Κλείστε ραντεβού</a>
+      <a href="#about" class="btn btn-ghost" style="font-weight:500;">Το προφίλ μου</a>
     </div>
   </div>
-  <a href="#about" class="scroll-cue" aria-label="Σuνεχίστε προς τα κάτω">
-    <span class="ln"></span>
-    Scroll
-  </a>
 </header>
 
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>Ενήλικες</span><span>Έφηβοι</span><span>Ζευγάρια</span><span>Σuνθετική προσέγγιση</span><span>Δια ζώσης & online</span><span>Εχεμύθεια</span>
-    <span>Ενήλικες</span><span>Έφηβοι</span><span>Ζευγάρια</span><span>Σuνθετική προσέγγιση</span><span>Δια ζώσης & online</span><span>Εχεμύθεια</span>
-  </div>
-</div>
-
-<section class="about section wrap" id="about">
-  <div class="about-grid">
-    <figure class="about-figure reveal">
-      <div class="imgwrap">
-        <img src="https://cdn.doctoranytime.gr/profileimages/4b5a5a52-c34c-4c18-b8f0-f17e3642f51e.jpg" alt="Πορτρέτο της Μάρθας Πλέσσα" loading="lazy">
-        <div class="frame"></div>
-      </div>
-      <span class="tag">Παλλήνη, Αττική</span>
-    </figure>
-    <div class="about-body">
-      <p class="eyebrow reveal">Το προφίλ</p>
-      <h2 class="display reveal" data-d="1">Ακούγοντας <em>πίσω</em> από τις λέξεις.</h2>
-      <blockquote class="about-quote reveal" data-d="1">«Αντί να διώξουμε το σύμπτωμα, το ρωτάμε τι έχει να μας πει.»</blockquote>
-      <div class="text-cols-2 reveal" data-d="2">
-        <p>Η Μάρθα Πλέσσα είναι αδειούχος Ψuχολόγος – Ψuχοθεραπεύτρια και διατηρεί το ιδιωτικό της γραφείο στην Παλλήνη. Με πτυχίο Ψuχολογίας (BSc Hons) από το University of Essex και Μεταπτυχιακό (MSc) στη Σuνθετική Συμβουλευτική και Ψuχοθεραπεία.</p>
-        <p>Προσφέρει έναν ασφαλή, εχέμuθο χώρο για ενήλικες και εφήβους — είτε δια ζώσης είτε διαδικτυακά — βοηθώντας τους θεραπευόμενους να διερευνήσουν τις βαθύτερες επιθuμίες τους.</p>
-      </div>
-      <ul class="creds reveal" data-d="3">
-        <li>BSc (Hons) Ψuχολογίας</li>
-        <li>MSc Σuνθετική Ψuχοθεραπεία</li>
-        <li>Μέλος ΕΕΣ</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
+<!-- ============ PHILOSOPHY ============ -->
 <section class="approach section" id="approach">
-  <div class="bg-design" aria-hidden="true">
-    <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
-      <path d="M1000,0 C700,100 400,0 0,200 L0,1000 L1000,1000 Z" opacity="0.5"></path>
-    </svg>
-  </div>
+  <div class="minimal-draw dark"></div>
   <div class="wrap">
     <div class="sec-head-symm reveal">
       <p class="eyebrow">Η φιλοσοφία μου</p>
       <h2>Το σύμπτωμα είναι ένα <i>γράμμα</i>.</h2>
-      <p class="head-text">Μαθαίνουμε τη γλώσσα του σώματος και της ψυχής, όχι για να το σβήσουμε, αλλά για να το κατανοήσουμε.</p>
+      <p class="head-text">Δεν βιαζόμαστε να το «σβήσουμε». Μαθαίνουμε να το διαβάζουμε για να κατανοήσουμε την εσωτερική αλήθεια που κρύβει.</p>
     </div>
     <div class="approach-grid">
       <article class="appr-card reveal">
         <span class="appr-num">01</span>
-        <h3>Το σύμπτωμα ως γράμμα</h3>
-        <p>Το άγχος ή η φοβία σας είναι σαν ένα γράμμα που στέλνει ο εαυτός σας. Μαθαίνουμε να το διαβάζουμε.</p>
+        <h3>Ψuχαναλυτική Οπτική</h3>
+        <p>Αναζητούμε τις ασuνείδητες ρίζες της δυσφορίας, πέρα από την επιφανειακή διαχείριση των συμπτωμάτων.</p>
       </article>
       <article class="appr-card reveal" data-d="1">
         <span class="appr-num">02</span>
-        <h3>Σuνθετική ελευθερία</h3>
-        <p>Συνδυάζω το δομημένο πλαίσιο της ψυχοδυναμικής με την βαθιά παρατήρηση, προσαρμοσμένα στη δική σας μοναδικότητα.</p>
+        <h3>Μοναδικότητα</h3>
+        <p>Κάθε θεραπευτική διαδρομή είναι μοναδική. Προσαρμόζω τη συνθετική προσέγγιση στις δικές σας ιδιαίτερες ανάγκες.</p>
       </article>
       <article class="appr-card reveal" data-d="2">
         <span class="appr-num">03</span>
-        <h3>Η σχέση ως εργαστήριο</h3>
-        <p>Η ψuχοθεραπεία είναι μια υγιής συνεργασία. Η σχέση που χτίζουμε είναι το ίδιο το πεδίο της αλλαγής.</p>
+        <h3>Ασφαλές Πλαίσιο</h3>
+        <p>Εγγυημένη εχεμύθεια και επαγγελματικός σεβασμός σε ένα περιβάλλον ελεύθερο από κριτική.</p>
       </article>
     </div>
   </div>
 </section>
 
+<!-- ============ SERVICES (More info) ============ -->
 <section class="services section" id="services">
+  <div class="minimal-draw"></div>
   <div class="wrap">
     <div class="sec-head-symm reveal">
       <p class="eyebrow">Υπηρεσίες</p>
-      <h2>Φροντίδα <i>προσαρμοσμένη</i>.</h2>
+      <h2>Εξειδικευμένη <i>φροντίδα</i>.</h2>
       <p class="head-text">Συνεδρίες δια ζώσης στην Παλλήνη ή online. Ειδικό κόστος για ανέργους και φοιτητές.</p>
     </div>
 
@@ -514,7 +290,7 @@ a.cd:hover .val{color:var(--accent)}
           <span class="svc-toggle" aria-hidden="true"></span>
         </button>
         <div class="svc-panel"><div class="svc-panel-inner">
-          <p>Χώρος χωρίς κριτική για ζητήματα κατάθλιψης, άγχους, φοβιών και επαναλαμβανόμενων μοτίβων ζωής. Στόχος είναι η κατανόηση της προσωπικής σας αλήθειας.</p>
+          <p>Μέσα από μια συνθετική προσέγγιση με έμφαση στη Λακανική Ψuχανάλυση, δουλεύουμε πάνω σε ζητήματα που δυσκολεύουν την καθημερινότητά σας. Αντιμετωπίζουμε το άγχος, την κατάθλιψη, τις φοβίες, τις κρίσεις πανικού και τα επαναλαμβανόμενα δυσλειτουργικά μοτίβα στις σχέσεις. Στόχος δεν είναι απλώς η ανακούφιση των συμπτωμάτων, αλλά η βαθύτερη κατανόηση του εαυτού και η ανάκτηση της εσωτερικής ελευθερίας.</p>
         </div></div>
       </div>
       <div class="svc reveal" data-d="1">
@@ -524,7 +300,7 @@ a.cd:hover .val{color:var(--accent)}
           <span class="svc-toggle" aria-hidden="true"></span>
         </button>
         <div class="svc-panel"><div class="svc-panel-inner">
-          <p>Υποστήριξη στη μετάβαση της εφηβείας. Βοηθώ τους γονείς να κατανοήσουν τη δυναμική σχέσης, και τους εφήβους να ανακαλύψουν την ταυτότητά τους.</p>
+          <p>Η εφηβεία είναι μια περίοδος έντονων αλλαγών και αναζήτησης ταυτότητας. Προσφέρω έναν ανεξάρτητο, ασφαλή χώρο στους εφήβους για να εκφράσουν τις ανησυχίες τους, μακριά από την κριτική του οικογενειακού ή σχολικού περιβάλλοντος. Παράλληλα, παρέχω συμβουλευτική γονέων, βοηθώντας τους να κατανοήσουν τη δυναμική της σχέσης με το παιδί τους και να αναπτύξουν αποτελεσματικούς τρόπους επικοινωνίας κατά τη διάρκεια αυτής της μεταβατικής φάσης, βασιζόμενη και στην εξειδίκευσή μου στην Ειδική Αγωγή.</p>
         </div></div>
       </div>
       <div class="svc reveal" data-d="2">
@@ -534,155 +310,198 @@ a.cd:hover .val{color:var(--accent)}
           <span class="svc-toggle" aria-hidden="true"></span>
         </button>
         <div class="svc-panel"><div class="svc-panel-inner">
-          <p>Αποκατάσταση της επικοινωνίας και κατανόηση των ασuνείδητων δυναμικών του ζεύγους. Προσφέρεται και online.</p>
+          <p>Όταν η επικοινωνία σε μια σχέση καταρρέει, η θεραπεία ζεύγους μπορεί να προσφέρει ένα ουδέτερο πλαίσιο για την ανασύνθεσή της. Δουλεύουμε πάνω σε χρόνια συγκρουσιακά θέματα, προβλήματα εμπιστοσύνης, συναισθηματική απομάκρυνση ή κρίσεις (όπως μια απιστία). Στόχος είναι να ακουστούν οι ανάγκες και των δύο πλευρών, να κατανοηθούν οι ασuνείδητες δυναμικές που τροφοδοτούν τις συγκρούσεις και να βρεθούν νέοι, υγιείς τρόποι σύνδεσης ή διαχείρισης του χωρισμού.</p>
         </div></div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ============ PROCESS (Bigger ImageSTICKY removed for symmetrical grid) ============ -->
 <section class="process section" id="process">
-  <div class="wrap process-grid">
-    <div class="path-col">
-      <div class="sec-head-symm reveal" style="text-align:left; align-items:flex-start; margin-left:0;">
-        <p class="eyebrow">Η διαδρομή</p>
-        <h2 style="text-align:left;">Πέρα από το <i>προφανές.</i></h2>
-        <p class="lede" style="text-align:left;">Ο δρόμος προς την ψuχική ευεξία δεν είναι ευθεία γραμμή. Είναι ένας δρόμος ανακάλuψης — με συνέπεια, υπομονή και επιστημονική τεκμηρίωση.</p>
-      </div>
-      
-      <div class="path">
-        <div class="path-line" aria-hidden="true">
-          <svg preserveAspectRatio="none" viewBox="0 0 2 100"><path class="pl" d="M1 0 L1 100" pathLength="1"/></svg>
-        </div>
-        <div class="step reveal">
-          <div class="step-dot"><span class="ring">α</span></div>
-          <div class="step-body">
-            <h3>Η συνάντηση</h3>
-            <p>Χτίζουμε έναν ασφαλή, εχέμuθο χώρο. Ερχέστε συχνά ζητώντας απαλλαγή από ένα σύμπτωμα.</p>
-          </div>
-        </div>
-        <div class="step reveal">
-          <div class="step-dot"><span class="ring">β</span></div>
-          <div class="step-body">
-            <h3>Η ακρόαση</h3>
-            <p>Μαθαίνουμε τη γλώσσα του συμπτώματος, αναζητώντας τη βαθύτερη ιστορία ή σύγκρουση.</p>
-          </div>
-        </div>
-        <div class="step reveal">
-          <div class="step-dot"><span class="ring">γ</span></div>
-          <div class="step-body">
-            <h3>Το νέο νόημα</h3>
-            <p>Αναζητούμε ένα <em>νέο νόημα</em> στην εμπειρία σας και ανακτάτε την ελευθερία των επιλογών σας.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="process-image reveal" data-d="2">
-      <div class="imgwrap">
-        <img src="https://cdn.doctoranytime.gr/practices/da8a4454-10e6-4d4a-afaa-ef7476e30cf3.jpg" alt="Θεραπευτικός χώρος" loading="lazy">
-      </div>
-      <span class="tag">Ο χώρος συνεδριών</span>
-    </div>
-  </div>
-</section>
-
-<section class="reviews section" id="reviews">
+  <div class="minimal-draw"></div>
   <div class="wrap">
     <div class="sec-head-symm reveal">
-      <p class="eyebrow">Μαρτυρίες</p>
-      <h2>Λόγια εμπιστοσύνης.</h2>
+      <p class="eyebrow">Η διαδρομή</p>
+      <h2>Πέρα από το <i>προφανές.</i></h2>
     </div>
     
-    <div class="review-score reveal">
-      <div class="num">10.0</div>
-      <div class="stars" aria-hidden="true">★★★★★</div>
-      <small>Doctoranytime · 15 αξιολογήσεις</small>
-    </div>
-
-    <div class="carousel reveal" id="track">
-      <div class="text-cols-2" style="gap:1.5rem;">
-          <div class="review-inner">
-            <div class="review-mark" aria-hidden="true">“</div>
-            <p class="review-text">Άριστη και πλήρως καταρτισμένη. Με βοήθησε να ξεπεράσω μια δύσκολη κατάσταση σε σύντομο χρονικό διάστημα. Τη συστήνω ανεπιφύλακτα.</p>
-            <div class="review-meta"><span class="review-name">Νικόλαος</span><span class="review-date">Οκτώβριος 2024</span></div>
-          </div>
-          <div class="review-inner">
-            <div class="review-mark" aria-hidden="true">“</div>
-            <p class="review-text">Εξαιρετική επαγγελματίας, συνεπής. Με βοήθησε πολύ. Θα την πρότεινα για την καθαρότητα της σκέψης και την αποτελεσματικότητά της.</p>
-            <div class="review-meta"><span class="review-name">George</span><span class="review-date">Αύγουστος 2024</span></div>
-          </div>
+    <div class="process-grid reveal">
+      <div class="process-image">
+        <div class="imgwrap">
+          <img src="https://cdn.doctoranytime.gr/practices/da8a4454-10e6-4d4a-afaa-ef7476e30cf3.jpg" alt="Θεραπευτικός χώρος Παλλήνη">
+        </div>
+      </div>
+      <div class="process-text" style="text-align:left;">
+        <p class="lede" style="margin-bottom:1.5rem; text-align:left;">Ο δρόμος προς την ψuχική ευεξία δεν είναι ευθεία γραμμή. Είναι ένας δρόμος ανακάλυψης — με συνέπεια, υπομονή και επιστημονική τεκμηρίωση.</p>
+        <p style="color:var(--ink-soft);">Στον χώρο αυτό, δίνουμε χρόνο στο σύμπτωμα να μιλήσει. Αναζητούμε την ασυνείδητη επιθυμία που κρύβεται πίσω από το άγχος, τη θλίψη ή την επανάληψη. Μέσα από την ψuχαναλυτική ακρόαση, επεξεργαζόμαστε το τραύμα και τις πρώιμες εγγραφές που καθορίζουν το παρόν, ανοίγοντας τον δρόμο για ένα νέο νόημα στη ζωή.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="gallery section wrap" id="gallery">
-  <div class="sec-head-symm reveal">
-    <p class="eyebrow">Ο χώρος</p>
-    <h2>Ήρεμο <i>περιβάλλον</i>.</h2>
-  </div>
-  <div class="gallery-grid reveal">
-    <div class="gtile tall wide"><img src="https://cdn.doctoranytime.gr/practices/b6533839-94b9-4337-bf5a-438d8dc3cba9.jpg" alt="Γραφείο" loading="lazy"></div>
-    <div class="gtile"><img src="https://cdn.doctoranytime.gr/practices/588ba42d-8b71-4d82-b236-17e06e833e2e.jpg" alt="Λεπτομέρεια" loading="lazy"></div>
-    <div class="gtile"><img src="https://cdn.doctoranytime.gr/practices/57b004cd-6b3c-4a54-9e3b-c532073e76d3.jpg" alt="Αναμονή" loading="lazy"></div>
+<!-- ============ ΑΞΙΟΛΟΓΗΣΕΙΣ (Added all reviews) ============ -->
+<section class="reviews section" id="reviews">
+  <div class="minimal-draw dark"></div>
+  <div class="wrap">
+    <div class="sec-head-symm reveal">
+      <p class="eyebrow">Doctoranytime</p>
+      <h2>Αξιολογήσεις.</h2>
+      <p class="head-text">Λόγια εμπιστοσύνης από ανθρώπους που μοιράστηκαν τη διαδρομή τους.</p>
     </div>
+    
+    <div class="reveal">
+        
+      <article class="review-inner">
+        <div style="font-family:serif;font-size:1.1rem;color:#fff;margin-bottom:1rem;">10.0</div>
+        <p class="review-text">Κάνω έδω και 4 μήνες συνεδρίες με την κυρία Μάρθα και έχω μείνει πολύ ευχαριστημένη δίνει βάση σε κάθε θέμα που συζητάμ κ με έχει βοηθήσει πολύ την συστήνω επιφυλακτα !!!</p>
+        <div class="review-meta-symm"><span class="review-name">Έλενα</span><span class="review-date">10 Μαρτίου 2025</span></div>
+      </article>
+
+      <article class="review-inner">
+        <div style="font-family:serif;font-size:1.1rem;color:#fff;margin-bottom:1rem;">10.0</div>
+        <p class="review-text">Εξαιρετική επαγγελματίας , εμπνέει εμπιστοσύνη</p>
+        <div class="review-meta-symm"><span class="review-name">thanasis</span><span class="review-date">13 Ιανουαρίου 2025</span></div>
+      </article>
+
+      <article class="review-inner">
+        <div style="font-family:serif;font-size:1.1rem;color:#fff;margin-bottom:1rem;">10.0</div>
+        <p class="review-text">Είναι εξαίρετη ,σε κάνει να νιώθεις άνετα.</p>
+        <div class="review-meta-symm"><span class="review-name">Αγγελική</span><span class="review-date">10 Οκτωβρίου 2024</span></div>
+      </article>
+
+      <article class="review-inner">
+        <div style="font-family:serif;font-size:1.1rem;color:#fff;margin-bottom:1rem;">10.0</div>
+        <p class="review-text">Επισκέφτηκα τη κ Πλέσσα μετά από μια μακροχρονια περίοδο άγχους και κρίσεων πανικού που είχα. Άριστη και πλήρως καταρτισμενη πάνω στο πρόβλημά μου. Με βοήθησε να ξεπεράσω αυτή τη δύσκολη κατάσταση σε σύντομο χρονικό διάστημα. Τη συστήνω ανεπιφύλακτα..</p>
+        <div class="review-meta-symm"><span class="review-name">Νικολαος</span><span class="review-date">08 Οκτωβρίου 2024</span></div>
+      </article>
+
+      <article class="review-inner">
+        <div style="font-family:serif;font-size:1.1rem;color:#fff;margin-bottom:1rem;">10.0</div>
+        <p class="review-text">Εξαιρετική! Με βοήθησε πολύ σε μια δύσκολη φάση της ζωής μου. Ένιωσα ότι θα μπορούσα να της μιλήσω ανοιχτά για ότι με απασχολούσε.</p>
+        <div class="review-meta-symm"><span class="review-name">Aλίκη</span><span class="review-date">07 Οκτωβρίου 2024</span></div>
+      </article>
+
+      <article class="review-inner">
+        <div style="font-family:serif;font-size:1.1rem;color:#fff;margin-bottom:1rem;">10.0</div>
+        <p class="review-text">Εξαιρετική επαγγελματίας, συνεπής ανταποκρίθηκε άμεσα στο αίτημά μου για ραντεβού. Οι συνεδρίες μας διήρκησαν 1 χρόνο και πραγματικά με βοήθησε πολύ στην αντιμετώπιση επαγγελματικού μου προβλήματος. Θα την πρότεινα για την καθαρότητα της σκέψης της, την υπομονή και την αποτελεσματικότητα της.</p>
+        <div class="review-meta-symm"><span class="review-name">George</span><span class="review-date">30 Αυγούστου 2024</span></div>
+      </article>
+
+      <article class="review-inner">
+        <div style="font-family:serif;font-size:1.1rem;color:#fff;margin-bottom:1rem;">10.0</div>
+        <p class="review-text">Η βοήθειά της ήταν σημαντική για να ξεπεράσω το ψuχολογικό πρόβλημα που μου δημιούργησε το διαζύγιό μου.</p>
+        <div class="review-meta-symm"><span class="review-name">ΓΙΑΝΝΗΣ</span><span class="review-date">08 Ιουλίου 2024</span></div>
+      </article>
+
+      <article class="review-inner">
+        <div style="font-family:serif;font-size:1.1rem;color:#fff;margin-bottom:1rem;">10.0</div>
+        <p class="review-text">Η κ Πλέσσα με βοήθησε σε μια δύσκολη περίοδο της ζωής μου οι συμβουλές και η καθοδήγηση της ήταν καθοριστικές!!! Ευχαριστώ πολύ πρώτα τον άνθρωπο κι έπειτα την εξαιρετική επιστήμονα!</p>
+        <div class="review-meta-symm"><span class="review-name">Aimilia</span><span class="review-date">07 Ιουλίου 2024</span></div>
+      </article>
+
+      <article class="review-inner">
+        <div style="font-family:serif;font-size:1.1rem;color:#fff;margin-bottom:1rem;">10.0</div>
+        <p class="review-text">Εξαιρετική με γνώση και ενσυναίσθηση.</p>
+        <div class="review-meta-symm"><span class="review-name">BENETA</span><span class="review-date">01 Ιουλίου 2024</span></div>
+      </article>
+
+      <article class="review-inner">
+        <div style="font-family:serif;font-size:1.1rem;color:#fff;margin-bottom:1rem;">10.0</div>
+        <p class="review-text">Καταπληκτικός άνθρωπος φοβερή επαγγελματίας με γνώσεις,, εχεμύθεια κ αξιοπιστία ...ευχαριστούμε</p>
+        <div class="review-meta-symm"><span class="review-name">Ιωαννα</span><span class="review-date">30 Ιουνίου 2024</span></div>
+      </article>
+
+      <article class="review-inner">
+        <div style="font-family:serif;font-size:1.1rem;color:#fff;margin-bottom:1rem;">10.0</div>
+        <p class="review-text">Προσέγγισε το πρόβλημά μου ανθρώπινα.Βοήθησε να βελτιώσω την καθημερινότητά μου και να περιορίσω το άγχος μου.</p>
+        <div class="review-meta-symm"><span class="review-name">ΕΛΛΗ</span><span class="review-date">30 Ιουνίου 2024</span></div>
+      </article>
+
+      <article class="review-inner">
+        <div style="font-family:serif;font-size:1.1rem;color:#fff;margin-bottom:1rem;">10.0</div>
+        <p class="review-text">Δε θα ξεχάσω ποτέ την άμεση λύση που βρήκα σε προσωπικό μου πρόβλημα, με βοήθησε πολύ να βρω τα πατήματά μου. Με άκουσε προσεκτικά και μου έδειξε τρόπους αντιμετώπισης του προβλήματος που δεν είχα σκεφτεί. Την προτείνω με κλειστά μάτια.</p>
+        <div class="review-meta-symm"><span class="review-name">ΘΕΟΔΩΡΑ</span><span class="review-date">30 Ιουνίου 2024</span></div>
+      </article>
+
+      <article class="review-inner">
+        <div style="font-family:serif;font-size:1.1rem;color:#fff;margin-bottom:1rem;">10.0</div>
+        <p class="review-text">Πολύ προσιτή και αποτελεσματική!</p>
+        <div class="review-meta-symm"><span class="review-name">ANN</span><span class="review-date">11 Ιουνίου 2024</span></div>
+      </article>
+
+    </div>
+    
+    <div class="review-more-link-symm">
+        <a href="https://www.doctoranytime.gr/d/Psychologos/plessa-martha#review-section" target="_blank" rel="noopener" class="btn btn-ghost" style="color:var(--sand);border-color:rgba(255,255,255,0.3);">Διαβάστε όλες τις αξιολογήσεις</a>
+    </div>
+
+  </div>
 </section>
 
+<!-- ============ FAQ (More Content) ============ -->
 <section class="faq section wrap" id="faq">
+  <div class="minimal-draw"></div>
   <div class="sec-head-symm reveal">
     <p class="eyebrow">Σuχνές ερωτήσεις</p>
     <h2>Πριν την <i>πρώτη</i> συνάντηση.</h2>
   </div>
   <div class="faq-grid reveal">
     <div class="faq-list">
+        
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false"><span>Σε ποιους απευθύνονται οι συνεδρίες;</span><span class="faq-icon" aria-hidden="true"></span></button>
-        <div class="faq-a"><p>Σε ενήλικες, εφήβους, ζευγάρια και γονείς. Προσέγγιση προσαρμοσμένη στη μοναδικότητα του κάθε προσώπου.</p></div>
+        <button class="faq-q" aria-expanded="false"><span>Τι είναι η συνθετική ψuχοθεραπεία;</span><span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-a"><p>Είναι μια προσέγγιση που δεν περιορίζεται σε μία μόνο τεχνική. Συνδυάζει στοιχεία από διαφορετικές ψuχοθεραπευτικές σχολές, προσαρμόζοντας το θεραπευτικό μοντέλο στη μοναδική προσωπικότητα και τις ανάγκες του κάθε θεραπευόμενου, πάντα μέσα σε ένα επιστημονικά τεκμηριωμένο πλαίσιο.</p></div>
       </div>
+
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false"><span>Γίνονται συνεδρίες διαδικτυακά;</span><span class="faq-icon" aria-hidden="true"></span></button>
-        <div class="faq-a"><p>Ναι, μέσω βιντεοκλήσης, ανάλογα με τις ανάγκες σας.</p></div>
+        <button class="faq-q" aria-expanded="false"><span>Τι σημαίνει ψuχαναλυτικός προσανατολισμός;</span><span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-a"><p>Σημαίνει ότι στη δουλειά μας λαμβάνουμε σοβαρά υπόψη τις ασuνείδητες διεργασίες. Αναζητούμε τις ρίζες των τωρινών δυσκολιών σε παρελθοντικές εμπειρίες και εγγραφές, βοηθώντας σας να κατανοήσετε γιατί επαναλαμβάνετε συγκεκριμένα μοτίβα συμπεριφοράς και πώς μπορείτε να απεγκλωβιστείτε από αυτά.</p></div>
       </div>
+
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false"><span>Υπάρχει ειδικό κόστος για φοιτητές;</span><span class="faq-icon" aria-hidden="true"></span></button>
-        <div class="faq-a"><p>Ναι, διατηρείται ειδικό κόστος για ανέργους και φοιτητές.</p></div>
+        <button class="faq-q" aria-expanded="false"><span>Πόσο διαρκεί μια συνεδρία;</span><span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-a"><p>Η διάρκεια της ατομικής συνεδρίας είναι 45-50 λεπτά. Για τη θεραπεία ζεύγους, η διάρκεια μπορεί να είναι 70-75 λεπτά.</p></div>
       </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span>Πόσο συχνές θα είναι οι συναντήσεις;</span><span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-a"><p>Σuνήθως η συχνότητα είναι εβδομαδιαία, ειδικά στην αρχή της θεραπείας, για να χτιστεί η θεραπευτική σχέση και να υπάρχει συνέχεια στη δουλειά. Στη συνέχεια, και ανάλογα με το αίτημα, η συχνότητα μπορεί να αναπροσαρμοστεί.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span>Τηρείται εχεμύθεια;</span><span class="faq-icon" aria-hidden="true"></span></button>
+        <div class="faq-a"><p>Απολύτως. Το απόρρητο της θεραπευτικής διαδικασίας είναι θεμελιώδες. Όσα συζητούνται μένουν αυστηρά μεταξύ θεραπευτή και θεραπευόμενου, βάσει του κώδικα δεοντολογίας των ψuχολόγων.</p></div>
+      </div>
+
     </div>
   </div>
 </section>
 
 </main>
 
+<!-- ============ CONTACT & FOOTER ============ -->
 <section class="contact section" id="contact">
+  <div class="minimal-draw"></div>
   <div class="wrap contact-grid">
     <div class="contact-l reveal">
       <p class="eyebrow">Επικοινωνία</p>
       <h2>Ας ξεκινήσουμε.</h2>
-      <p>Επικοινωνήστε μαζί μου για να κλείσουμε ένα ραντεβού — δια ζώσης ή online.</p>
-      <div class="text-cols-2">
-        <a class="cd" href="tel:+306937558121">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span><span class="lbl">Τηλέφωνο</span><span class="val">6937 558121</span></span>
-        </a>
-        <a class="cd" href="mailto:plessamartha@yahoo.com">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-          <span><span class="lbl">Email</span><span class="val">plessamartha@yahoo.com</span></span>
-        </a>
-      </div>
-      <div class="contact-social" style="margin-top:2rem;">
-        <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
+      <p>Επικοινωνήστε μαζί μου για να κλείσουμε ένα ραντεβού — δια ζώσης στην Παλλήνη ή online.</p>
+      <div style="font-size:1.1rem;color:var(--ink);margin-top:2rem;">6937 558121</div>
+      <div style="color:var(--ink-soft);">plessamartha@yahoo.com</div>
+      <div class="contact-social" style="margin-top:2rem; display:flex; gap:1rem;">
+        <a href="https://www.doctoranytime.gr/d/Psychologos/plessa-martha" target="_blank" rel="noopener" aria-label="Doctoranytime" style="width:40px;height:40px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;">d</a>
       </div>
     </div>
     <div class="map-wrap reveal" data-d="1">
-      <iframe title="Χάρτης" src="about:blank" loading="lazy"></iframe>
+      <iframe title="Χάρτης γραφείου" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.9352737666244!2d23.88241477651034!3d37.9902636719313!2m3!1f0!2f0!3f0!3m2!1i1024!2i1024!3m4!1s0x14a19b88b22a0001%3A0xc07a2a0a2a0a2a0a!2zTNC1z4nPhs-Mz4HOv8-CIM6czrHPgc6xzrjPjs69zr_PgiA1MywgzqDOsc67zrvOrs69zrcgMTUzIDUxLCDOlc67zrvOrM60zrE!5e0!3m2!1sel!2sus!4v1717612345678!5m2!1sel!2sus" loading="lazy"></iframe>
     </div>
   </div>
 </section>
 
 <footer class="footer">
+  <div class="minimal-draw dark"></div>
   <div class="wrap footer-inner">
     <div class="footer-brand">
       <svg class="nav-mark" viewBox="0 0 100 100" aria-hidden="true" width="30" height="30">
@@ -695,64 +514,37 @@ a.cd:hover .val{color:var(--accent)}
   </div>
 </footer>
 
-<div class="lightbox" id="lightbox" aria-hidden="true">
-  <img src="" alt="">
-</div>
-
 <script>
 (function(){
   'use strict';
   const $=(s,c)=>(c||document).querySelector(s);
   const $$=(s,c)=>Array.from((c||document).querySelectorAll(s));
 
-  /* ---- LOADER ---- */
+  /* LOADER */
   window.addEventListener('load',()=>{
-    setTimeout(()=>$('#loader').classList.add('done'),500);
+    setTimeout(()=>$('#loader').style.display='none',500);
   });
 
-  /* ---- HERO entrance ---- */
-  requestAnimationFrame(()=>setTimeout(()=>$('#hero').classList.add('in'),300));
-
-  /* ---- NAV scroll state ---- */
+  /* NAV SCROLL */
   const nav=$('#nav');
   window.addEventListener('scroll',()=>{nav.classList.toggle('solid',window.scrollY>60);},{passive:true});
 
-  /* ---- REVEAL ---- */
+  /* REVEAL */
   const io=new IntersectionObserver((entries)=>{
     entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
   },{threshold:.1});
   $$('.reveal').forEach(el=>io.observe(el));
 
-  /* ---- PROCESS path draw ---- */
-  const path=$('.process .pl');
-  if(path){
-    const pio=new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{if(e.isIntersecting){path.style.strokeDashoffset='0';pio.unobserve(e.target);}});
-    },{threshold:.2});
-    pio.observe($('.path'));
-  }
-
-  /* ---- ACCORDIONS ---- */
-  const initAccordion=(items,triggerAcc,panelAcc)=>{
-      $$(items).forEach(item=>{
-        $(triggerAcc,item).addEventListener('click',()=>{
-          const open=item.classList.contains('open');
-          $$(items+'.open').forEach(o=>{o.classList.remove('open');$(panelAcc,o).style.maxHeight=null;});
-          if(!open){item.classList.add('open');$(panelAcc,item).style.maxHeight=$(panelAcc,item).scrollHeight+'px';}
-        });
-      });
-  }
-  initAccordion('.svc','.svc-trigger','.svc-panel');
-  initAccordion('.faq-item','.faq-q','.faq-a');
-
-  /* ---- LIGHTBOX ---- */
-  const lb=$('#lightbox'),lbImg=$('#lightbox img');
-  $$('.gtile').forEach(t=>{
-    t.addEventListener('click',()=>{const img=$('img',t);lbImg.src=img.src;lb.classList.add('show');document.body.style.overflow='hidden';});
+  /* FAQs */
+  $$('.faq-item').forEach(item=>{
+    $('.faq-q',item).addEventListener('click',()=>{
+      const open=item.classList.contains('open');
+      $$('.faq-item.open').forEach(o=>{o.classList.remove('open');$('.faq-a',o).style.maxHeight=null;});
+      if(!open){item.classList.add('open');$('.faq-a',item).style.maxHeight=$('.faq-a',item).scrollHeight+'px';}
+    });
   });
-  lb.addEventListener('click',()=>{lb.classList.remove('show');document.body.style.overflow='';});
-
-  /* ---- YEAR ---- */
+  
+  /* YEAR */
   $('#year').textContent=new Date().getFullYear();
 })();
 </script>
