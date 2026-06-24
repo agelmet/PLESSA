@@ -375,6 +375,23 @@ a.cd:hover .val{color:var(--wine)}
 .footer-copy{font-family:var(--sans);font-size:.78rem;letter-spacing:.04em;color:var(--sand);text-align:center;}
 .footer-credit a{color:var(--paper);border-bottom:1px solid rgba(255,255,255,.2);transition:color .3s;}
 .footer-credit a:hover{color:var(--accent)}
+.footer-btn {
+  font-family: var(--sans);
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: .06em;
+  color: var(--sand-light);
+  border: 1px solid var(--sand-light);
+  padding: .5em 1.2em;
+  border-radius: 100px;
+  transition: background .4s, color .4s;
+  display: inline-block;
+  text-transform: uppercase;
+}
+.footer-btn:hover {
+  background: var(--sand-light);
+  color: var(--wine-deep);
+}
 
 /* ============ LIGHTBOX & REVEAL ============ */
 .lightbox{position:fixed;inset:0;z-index:9998;background:rgba(0,0,0,.9);display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;visibility:hidden;transition:opacity .5s var(--ease-expo),visibility .5s;}
@@ -724,7 +741,7 @@ a.cd:hover .val{color:var(--wine)}
       </div>
     </div>
     <div class="map-wrap reveal" data-d="1">
-      <iframe title="Χάρτης" src="about:blank" loading="lazy"></iframe>
+      <iframe title="Χάρτης" src="https://maps.google.com/maps?q=%CE%9B%CE%B5%CF%89%CF%86%CF%8C%CF%81%CE%BF%CF%82%20%CE%9C%CE%B1%CF%81%CE%B1%CE%B8%CF%8E%CE%BD%CE%BF%CF%82%2053%20%CE%A0%CE%B1%CE%BB%CE%BB%CE%AE%CE%BD%CE%B7&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
     </div>
   </div>
 </section>
@@ -737,7 +754,10 @@ a.cd:hover .val{color:var(--wine)}
       </svg>
       <b>Μάρθα Πλέσσα</b>
     </div>
-    <p class="footer-copy">© <span id="year"></span> · Ψυχολόγος · 211 411 7580 · Παλλήνη</p>
+    <div style="display:flex; flex-direction:column; align-items:center; gap:.8rem;">
+      <p class="footer-copy">© <span id="year"></span> · Ψυχολόγος · 211 411 7580 · Παλλήνη</p>
+      <a href="https://www.doctoranytime.gr/d/Psychologos/plessa-martha" target="_blank" rel="noopener" class="footer-btn">Doctoranytime</a>
+    </div>
     <p class="footer-credit">Designed by <a href="https://www.advonmedia.com" target="_blank" rel="noopener">Advon Media</a></p>
   </div>
 </footer>
